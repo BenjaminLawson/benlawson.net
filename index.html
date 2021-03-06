@@ -1,19 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Ben Lawson</title>
+    <style>
+     body {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+
+     #profile {
+         display: flex;
+         flex-grow: 1;
+         flex-direction: column;
+         align-items: center;
+     }
+
+     #social-links {
+         list-style: none;
+         padding-left: 0;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+    </style>
 </head>
 <body>
-    <main itemscope itemtype="https://schema.org/Person">
-        <h1 itemprop="name">Ben Lawson</h1>
-        <h3 itemprop="jobTitle">Software Engineer</h3>
+    <main id="profile" itemscope itemtype=
+    "https://schema.org/Person">
+        <h1>Hi, I'm <span itemprop="name">Ben Lawson</span>.</h1>
+        <h3 itemprop="jobTitle" aria-label="profession">Software
+        Engineer</h3>
         <section itemprop="address" itemscope itemtype=
-        "https://schema.org/PostalAddress">
+        "https://schema.org/PostalAddress" aria-label="address">
             <h3><span itemprop="addressLocality">San Diego</span>,
             <span itemprop="addressRegion">CA</span></h3>
         </section>
         <section>
-            <ul>
+            <ul id="social-links">
                 <li>
                     <a href=
                     "https://www.linkedin.com/in/ben-lawson-a17a2879">
@@ -25,7 +49,8 @@
                 </li>
                 <li>
                     <a href="mailto:contact@benlawson.net"
-                    itemprop="email">contact@benlawson.net</a>
+                    itemprop="email" aria-label=
+                    "email">contact@benlawson.net</a>
                 </li>
             </ul>
         </section>
